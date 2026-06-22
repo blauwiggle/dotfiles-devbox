@@ -1,0 +1,170 @@
+tap "hashicorp/tap", trusted: true
+tap "oven-sh/bun", trusted: true
+tap "snyk/tap", trusted: true
+# GitOps Continuous Delivery for Kubernetes
+brew "argocd"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Programmable completion for Bash 3.2
+brew "bash-completion", link: false
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Stream-based forensics tool
+brew "bulk_extractor"
+# Prevent cloud misconfigurations during build-time for IaC tools
+brew "checkov"
+# Statistics utility to count lines of code
+brew "cloc"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
+# Load/unload environment variables based on $PWD
+brew "direnv"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
+# Modern, maintained replacement for ls
+brew "eza"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# Git extension for versioning large files
+brew "git-lfs"
+# Audit git repos for secrets
+brew "gitleaks"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# GNU grep, egrep and fgrep
+brew "grep"
+# Like cURL, but for gRPC
+brew "grpcurl"
+# Tool for glamorous shell scripts
+brew "gum"
+# Kubernetes package manager
+brew "helm"
+# Cost estimates for Terraform, Terragrunt, and CloudFormation
+brew "infracost"
+# Istio configuration command-line utility
+brew "istioctl"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Package manager for kubectl plugins
+brew "krew"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# Template-free customization of Kubernetes YAML manifests
+brew "kustomize"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# AI coding agent, built for the terminal
+brew "opencode"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Password manager
+brew "pass"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
+# Python interface to Tcl/Tk
+brew "python-tk@3.14"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Tool to generate documentation from Terraform modules
+brew "terraform-docs"
+# Programmatically correct mistyped console commands
+brew "thefuck"
+# Official tldr client written in Rust
+brew "tlrc"
+# Vulnerability scanner for container images, file systems, and Git repos
+brew "trivy"
+# JavaScript package manager
+brew "yarn"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# Terraform
+brew "hashicorp/tap/terraform", trusted: true
+# Find & fix known vulnerabilities in open-source dependencies
+brew "snyk/tap/snyk", trusted: true
+# Terminal-based AI coding assistant
+cask "claude-code"
+# Cross-platform Git credential storage for multiple hosting providers
+cask "git-credential-manager"
+vscode "anthropic.claude-code"
+vscode "bencoleman.armview"
+vscode "eamodio.gitlens"
+vscode "github.vscode-codeql"
+vscode "github.vscode-pull-request-github"
+vscode "hashicorp.terraform"
+vscode "hediet.vscode-drawio"
+vscode "mdickin.markdown-shortcuts"
+vscode "mhutchie.git-graph"
+vscode "microsoft-isvexptools.powerplatform-vscode"
+vscode "ms-azure-devops.azure-pipelines"
+vscode "ms-azure-load-testing.microsoft-testing"
+vscode "ms-azuretools.azure-dev"
+vscode "ms-azuretools.vscode-azure-github-copilot"
+vscode "ms-azuretools.vscode-azure-mcp-server"
+vscode "ms-azuretools.vscode-azureappservice"
+vscode "ms-azuretools.vscode-azurearcenabledmachines"
+vscode "ms-azuretools.vscode-azurecontainerapps"
+vscode "ms-azuretools.vscode-azurefunctions"
+vscode "ms-azuretools.vscode-azureresourcegroups"
+vscode "ms-azuretools.vscode-azurestaticwebapps"
+vscode "ms-azuretools.vscode-azurestorage"
+vscode "ms-azuretools.vscode-azurevirtualmachines"
+vscode "ms-azuretools.vscode-bicep"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-cosmosdb"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-dotnettools.csdevkit"
+vscode "ms-dotnettools.csharp"
+vscode "ms-dotnettools.vscode-dotnet-runtime"
+vscode "ms-kubernetes-tools.vscode-aks-tools"
+vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+vscode "ms-sarifvscode.sarif-viewer"
+vscode "ms-vscode.azurecli"
+vscode "ms-vscode.makefile-tools"
+vscode "ms-vscode.powershell"
+vscode "ms-vscode.vscode-node-azure-pack"
+vscode "ms-windows-ai-studio.windows-ai-studio"
+vscode "redhat.vscode-yaml"
+vscode "yzhang.markdown-all-in-one"
+winget "Git.Git"
+winget "GitExtensionsTeam.GitExtensions"
+winget "GitHub.cli"
+winget "GitHub.GitLFS"
+winget "Microsoft.Azure.Az"
+winget "Microsoft.Azure.DataStudio"
+winget "Microsoft.Azure.StorageExplorer"
+winget "Microsoft.AzureCLI"
+winget "Microsoft.AzureMonitorAgent"
+winget "Microsoft.CLRTypesSQLServer.2019"
+winget "Microsoft.msodbcsql.17"
+winget "Microsoft.msodbcsql.18"
+winget "Microsoft.Office"
+winget "Microsoft.RemoteDesktopMMRService"
+winget "Microsoft.SQLServer.OLEDBDriver"
+winget "Microsoft.Teams"
+winget "Microsoft.VisualStudio.2022.Professional"
+winget "Microsoft.VisualStudioCode"
+winget "Microsoft.VSTOR"
+winget "Microsoft.WebDeploy"
+winget "Microsoft.WindowsSDK.10.0.26100"
+winget "Microsoft.WindowsTerminal"
+winget "Microsoft.WindowsVirtualDesktopAgent"
+winget "Microsoft.WindowsVirtualDesktopBootloader"
+winget "Python.Launcher"
+winget "SUSE.RancherDesktop"
+winget "Unity.UnityHub"

@@ -500,7 +500,16 @@ sync_project() {
       fi
 
     else
-      # ── Existing repo: pull on main/master, fetch otherwise ────────────────
+      # ── Existing repo: realign origin to the desired transport, then sync ───
+      # Repos cloned before SSH support still carry an HTTPS origin, which sends
+      # git through git-credential-manager → OAuth device code (blocked here).
+      # Rewrite origin to the SSH URL so pull/fetch never invokes GCM.
+      local current_url
+      current_url=$(git -C "$repo_dir" remote get-url origin 2>/dev/null || echo "")
+      if [[ -n "$current_url" && "$current_url" != "$url" ]]; then
+        git -C "$repo_dir" remote set-url origin "$url" 2>/dev/null || true
+      fi
+
       local branch
       branch=$(git -C "$repo_dir" symbolic-ref --short -q HEAD 2>/dev/null) \
         || branch="detached@$(git -C "$repo_dir" rev-parse --short HEAD 2>/dev/null || echo '?')"

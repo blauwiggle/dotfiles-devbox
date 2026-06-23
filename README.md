@@ -19,8 +19,10 @@ never overwrite each other.
 ./install.sh
 ```
 
-> Under WSL, `install.sh` also runs the WSL deploy automatically. Run
-> `./wsl/deploy.sh` directly only when you want a config-only update.
+> Under WSL, `install.sh` also runs the WSL deploy **and** restores Windows
+> Terminal settings automatically (the latter only once a config has been
+> captured into the repo). Run `./wsl/deploy.sh` or
+> `./windows-terminal/deploy.sh` directly for a config-only update.
 
 ## WSL config (`wsl/`)
 
@@ -39,6 +41,26 @@ never overwrite each other.
 ```bash
 ./wsl/deploy.sh   # then in Windows:  wsl --shutdown
 ```
+
+## Windows Terminal (`windows-terminal/`)
+
+Windows Terminal keeps its entire config — profiles (your bundled shells), color
+schemes, keybindings — in a single `settings.json` on the Windows C: drive, so it
+is **copied**, not symlinked.
+
+- `settings.json` — versioned copy of the live Terminal config.
+- `deploy.sh` — `backup` captures the live config into the repo; `restore`
+  (default) writes it back to `…\LocalState\settings.json`, saving a timestamped
+  `.bak` of whatever was there first.
+
+```bash
+./windows-terminal/deploy.sh backup    # capture current config -> repo
+./windows-terminal/deploy.sh restore   # write repo copy -> Windows (default)
+```
+
+Caveats: install fonts (Nerd Font / Cascadia Code) separately; dynamic WSL /
+PowerShell profiles re-match via their `source`, so they reappear automatically
+once those shells are installed; Windows Terminal has no native cloud sync.
 
 ## Notes
 

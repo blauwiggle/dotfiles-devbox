@@ -26,6 +26,14 @@ ln -sfn "$DIR/.zshrc" "$HOME/.zshrc"
 if grep -qi microsoft /proc/sys/kernel/osrelease 2>/dev/null; then
   echo "WSL detected -> deploying WSL config..."
   "$DIR/wsl/deploy.sh" || echo "  [warn] WSL deploy skipped/failed - run ./wsl/deploy.sh manually"
+
+  # Restore Windows Terminal settings, but only once a config has been captured
+  # into the repo (via ./windows-terminal/deploy.sh backup). Also non-fatal.
+  if [ -f "$DIR/windows-terminal/settings.json" ]; then
+    echo "Restoring Windows Terminal settings..."
+    "$DIR/windows-terminal/deploy.sh" \
+      || echo "  [warn] Windows Terminal restore skipped/failed - run ./windows-terminal/deploy.sh manually"
+  fi
 fi
 
 echo "Done. Open a new shell or run: source ~/.zshrc"

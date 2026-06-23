@@ -1,0 +1,98 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [],
+    "alwaysShowNotificationIcon": true,
+    "centerOnLaunch": true,
+    "compatibility.allowHeadless": true,
+    "copyFormatting": "all",
+    "copyOnSelect": true,
+    "defaultProfile": "{3eab5a9f-1f87-4318-9caa-c0abad0f415f}",
+    "experimental.enableColorSelection": true,
+    "keybindings": 
+    [
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "language": "en-US",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "colorScheme": "One Half Dark"
+        },
+        "list": 
+        [
+            {
+                "guid": "{965c1df0-e5ff-5ec0-a65d-7950fc221c97}",
+                "hidden": true,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{a6c6942c-ffdc-50c7-95ac-7cfbfbc52331}",
+                "hidden": true,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
+                "guid": "{0640178e-0d14-436b-837e-e29b9ce2cd01}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "name": "PowerShell",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "backgroundImage": "C:\\Users\\vanhee\\OneDrive - EVN\\Pictures\\Screenshots\\gradient-maverick.png",
+                "backgroundImageOpacity": 0.25,
+                "colorScheme": "One Half Dark",
+                "commandline": "C:\\Windows\\system32\\wsl.exe --distribution-id {ac591b66-e698-4188-9f2b-51dc2b3a0fa6}",
+                "experimental.retroTerminalEffect": false,
+                "guid": "{3eab5a9f-1f87-4318-9caa-c0abad0f415f}",
+                "hidden": false,
+                "icon": "C:\\Users\\vanhee\\AppData\\Local\\wsl\\{ac591b66-e698-4188-9f2b-51dc2b3a0fa6}\\shortcut.ico",
+                "intenseTextStyle": "all",
+                "name": "Debian",
+                "opacity": 50,
+                "pathTranslationStyle": "wsl",
+                "startingDirectory": "~/dev",
+                "useAcrylic": true
+            },
+            {
+                "guid": "{08ea2864-5d7d-55b4-a540-723e5c8d994b}",
+                "hidden": false,
+                "name": "rancher-desktop",
+                "source": "Microsoft.WSL"
+            },
+            {
+                "guid": "{a324b672-531f-5bf1-9ec2-007e471ea94c}",
+                "hidden": false,
+                "name": "rancher-desktop-data",
+                "source": "Microsoft.WSL"
+            }
+        ]
+    },
+    "rendering.graphicsAPI": "direct3d11",
+    "schemes": [],
+    "showTabsFullscreen": true,
+    "theme": "dark",
+    "themes": [],
+    "useAcrylicInTabRow": true
+}

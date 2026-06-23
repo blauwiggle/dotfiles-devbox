@@ -19,6 +19,9 @@ never overwrite each other.
 ./install.sh
 ```
 
+> Under WSL, `install.sh` also runs the WSL deploy automatically. Run
+> `./wsl/deploy.sh` directly only when you want a config-only update.
+
 ## WSL config (`wsl/`)
 
 `.wslconfig` lives on the Windows C: drive and can't be stowed, so it is

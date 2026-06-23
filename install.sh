@@ -21,4 +21,11 @@ brew bundle --file="$DIR/Brewfile.linux"
 # Symlink zsh config (overwrites any existing ~/.zshrc symlink)
 ln -sfn "$DIR/.zshrc" "$HOME/.zshrc"
 
+# WSL only: deploy Windows-side .wslconfig + Linux sysctl (reuses wsl/deploy.sh).
+# Skipped on non-WSL Linux. Non-fatal so a hiccup never aborts the installer.
+if grep -qi microsoft /proc/sys/kernel/osrelease 2>/dev/null; then
+  echo "WSL detected -> deploying WSL config..."
+  "$DIR/wsl/deploy.sh" || echo "  [warn] WSL deploy skipped/failed - run ./wsl/deploy.sh manually"
+fi
+
 echo "Done. Open a new shell or run: source ~/.zshrc"

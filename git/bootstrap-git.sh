@@ -23,7 +23,6 @@ if [ -n "$GCM" ]; then
   # 'cache' keeps tokens in memory (re-auth after reboot). Use 'plaintext' if you
   # prefer persistence: git config --global credential.credentialStore plaintext
   git config --global credential.credentialStore cache
-  git config --global credential."https://dev.azure.com".useHttpPath true
   echo "  [ok] credential.helper -> $GCM"
 else
   echo "  [warn] git-credential-manager not found — install via Brewfile.linux first."

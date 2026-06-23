@@ -141,8 +141,13 @@ load_config() {
       save_config
     fi
   fi
-  # Export stored PAT so az devops commands use it without prompting
-  [[ -n "${PAT:-}" ]] && export AZURE_DEVOPS_EXT_PAT="$PAT"
+  # Export stored PAT so az devops commands use it without prompting.
+  # Note: keep this in an if-block (not `[[ ]] && ...`) — a trailing test that
+  # returns non-zero would become load_config's exit status and, under set -e,
+  # silently kill the whole script.
+  if [[ -n "${PAT:-}" ]]; then
+    export AZURE_DEVOPS_EXT_PAT="$PAT"
+  fi
 }
 
 save_config() {

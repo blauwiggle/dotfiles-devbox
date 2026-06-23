@@ -33,13 +33,13 @@ git config --global pull.ff only
 
 # Optional SSH key (HTTPS+GCM already covers ADO/GitHub; SSH is opt-in)
 if [ "${1:-}" = "--ssh" ] || [ "${SSH_KEYGEN:-0}" = "1" ]; then
-  if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
+  if [ ! -f "$HOME/.ssh/id_rsa" ]; then
     mkdir -p "$HOME/.ssh"; chmod 700 "$HOME/.ssh"
-    ssh-keygen -t ed25519 -C "$email" -f "$HOME/.ssh/id_ed25519" -N ""
-    echo "  [ok] ed25519 key generated. Register this public key with GitHub + Azure DevOps:"
-    echo ""; cat "$HOME/.ssh/id_ed25519.pub"; echo ""
+    ssh-keygen -t rsa -b 4096 -C "$email" -f "$HOME/.ssh/id_rsa" -N ""
+    echo "  [ok] RSA 4096 key generated. Register this public key with Azure DevOps:"
+    echo ""; cat "$HOME/.ssh/id_rsa.pub"; echo ""
   else
-    echo "  [ok] ~/.ssh/id_ed25519 already exists — leaving it."
+    echo "  [ok] ~/.ssh/id_rsa already exists — leaving it."
   fi
 fi
 echo "  [ok] git identity + Azure DevOps credential setup complete."

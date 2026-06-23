@@ -34,6 +34,7 @@ ORG_URL=""
 BASEPATH=""
 SELECTED_PROJECTS=""
 RESELECT=false
+USE_SSH=true    # prefer SSH URLs; override with --https
 
 # Summary tracking
 declare -a CLONED=() PULLED=() FETCHED=() SKIPPED=() DELETED=() FAILED=()
@@ -59,6 +60,7 @@ print_banner() {
   echo ""
   echo -e "  ${DIM}Available options:${NC}"
   echo -e "  ${DIM}  -r, --reselect              Re-open project selection${NC}"
+  echo -e "  ${DIM}  --https                     Use HTTPS URLs instead of SSH${NC}"
   echo -e "  ${DIM}  -h, --help                  Show full usage help${NC}"
   echo -e "  ${DIM}  AZURE_DEVOPS_EXT_PAT=<pat>  PAT fallback if 'az login' is not active${NC}"
   echo ""
@@ -82,6 +84,18 @@ normalise_org_url() {
   [[ -z "$url" ]] && { printf '%s' ""; return; }
   url="${url%/}/"                          # exactly one trailing slash
   printf '%s' "$url"
+}
+
+# Convert an ADO HTTPS remote URL to SSH format.
+# https://dev.azure.com/<org>/<project>/_git/<repo>  →  git@ssh.dev.azure.com:v3/<org>/<project>/<repo>
+# Falls back to the original URL if it doesn't match the expected pattern.
+to_ssh_url() {
+  local url="$1"
+  if [[ "$url" =~ ^https://dev\.azure\.com/([^/]+)/([^/]+)/_git/(.+)$ ]]; then
+    echo "git@ssh.dev.azure.com:v3/${BASH_REMATCH[1]}/${BASH_REMATCH[2]}/${BASH_REMATCH[3]}"
+  else
+    echo "$url"
+  fi
 }
 
 prompt_org_url() {
@@ -456,6 +470,7 @@ sync_project() {
   while IFS=$'\t' read -r name url; do
     remote_names+=("$name")
     local repo_dir="${project_dir}/${name}"
+    [[ "$USE_SSH" == "true" ]] && url="$(to_ssh_url "$url")"
 
     if [[ ! -d "${repo_dir}/.git" ]]; then
       # ── Clone missing repo ─────────────────────────────────────────────────
@@ -677,6 +692,7 @@ usage() {
 
   Options:
     -r, --reselect    Re-open interactive project selection
+    --https           Use HTTPS URLs instead of SSH (default: SSH)
     -h, --help        Show this help
 
   Config file: ${CONFIG_FILE}
@@ -697,6 +713,7 @@ main() {
   for arg in "$@"; do
     case "$arg" in
       -r|--reselect) RESELECT=true ;;
+      --https)       USE_SSH=false ;;
       -h|--help)     usage; exit 0 ;;
       *) err "Unknown option: ${arg}"; usage; exit 1 ;;
     esac

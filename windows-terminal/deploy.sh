@@ -11,7 +11,7 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Resolve the Windows username via interop; fall back to the known profile.
 WIN_USER="$(cmd.exe /c 'echo %USERNAME%' 2>/dev/null | tr -d '\r\n ')"
 if [ -z "${WIN_USER}" ] || [ ! -d "/mnt/c/Users/${WIN_USER}" ]; then
-  WIN_USER="vanhee"
+  WIN_USER="$(ls /mnt/c/Users 2>/dev/null | grep -vi public | grep -vi default | head -1)"
 fi
 WIN_HOME="/mnt/c/Users/${WIN_USER}"
 [ -d "${WIN_HOME}" ] || { echo "ERROR: Windows home not found: ${WIN_HOME}"; exit 1; }
@@ -31,7 +31,7 @@ case "${1:-restore}" in
     # No JSON parsing: the file is JSONC (// comments, trailing commas).
     for f in "${WT_CANDIDATES[@]}"; do
       if [ -f "${f}" ]; then
-        cp "${f}" "${REPO_FILE}"
+        sed "s|/Users/${WIN_USER}/|/Users/<WIN_USER>/|g" "${f}" > "${REPO_FILE}"
         echo "  [ok] backed up: ${f}"
         echo "        -> ${REPO_FILE}"
         exit 0
@@ -63,7 +63,7 @@ case "${1:-restore}" in
       cp "${target}" "${target}.bak-$(date +%s)"
       echo "  [ok] saved current -> ${target}.bak-<ts>"
     fi
-    cp "${REPO_FILE}" "${target}"
+    sed "s|<WIN_USER>|${WIN_USER}|g" "${REPO_FILE}" > "${target}"
     echo "  [ok] restored: ${REPO_FILE}"
     echo "        -> ${target}"
     echo

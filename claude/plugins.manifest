@@ -1,0 +1,24 @@
+# Claude Code plugin reinstall manifest
+# Generated from ~/.claude/plugins/known_marketplaces.json + settings.json
+# Restore with: claude plugin marketplace add <url|owner/repo>  then  claude plugin install <name>@<marketplace>
+
+## Marketplaces
+marketplace	claude-plugins-official	anthropics/claude-plugins-official
+marketplace	ecc	https://github.com/affaan-m/ECC.git
+marketplace	365-skills	Agents365-ai/365-skills
+
+## Enabled plugins (from settings.json)
+plugin	ecc@ecc	true
+plugin	drawio@365-skills	true
+plugin	claude-md-management@claude-plugins-official	true
+plugin	claude-code-setup@claude-plugins-official	true
+plugin	commit-commands@claude-plugins-official	true
+plugin	pr-review-toolkit@claude-plugins-official	true
+plugin	hookify@claude-plugins-official	true
+plugin	microsoft-docs@claude-plugins-official	true
+plugin	azure@claude-plugins-official	true
+plugin	mermaid@365-skills	true
+plugin	atlassian@claude-plugins-official	false
+plugin	sonarqube@claude-plugins-official	false
+plugin	desktop-commander@claude-plugins-official	false
+plugin	miro@claude-plugins-official	false

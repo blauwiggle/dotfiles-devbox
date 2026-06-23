@@ -60,14 +60,14 @@
                 "startingDirectory": "%USERPROFILE%"
             },
             {
-                "backgroundImage": "C:\\Users\\vanhee\\OneDrive - EVN\\Pictures\\Screenshots\\gradient-maverick.png",
+                "backgroundImage": "C:\\Users\\<WIN_USER>\\OneDrive\\Pictures\\Screenshots\\gradient-maverick.png",
                 "backgroundImageOpacity": 0.25,
                 "colorScheme": "One Half Dark",
                 "commandline": "C:\\Windows\\system32\\wsl.exe --distribution-id {ac591b66-e698-4188-9f2b-51dc2b3a0fa6}",
                 "experimental.retroTerminalEffect": false,
                 "guid": "{3eab5a9f-1f87-4318-9caa-c0abad0f415f}",
                 "hidden": false,
-                "icon": "C:\\Users\\vanhee\\AppData\\Local\\wsl\\{ac591b66-e698-4188-9f2b-51dc2b3a0fa6}\\shortcut.ico",
+                "icon": "C:\\Users\\<WIN_USER>\\AppData\\Local\\wsl\\{ac591b66-e698-4188-9f2b-51dc2b3a0fa6}\\shortcut.ico",
                 "intenseTextStyle": "all",
                 "name": "Debian",
                 "opacity": 50,

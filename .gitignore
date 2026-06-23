@@ -1,0 +1,35 @@
+# ── Secrets / credentials — never commit ──────────────────────────────────────
+*.pem
+*.key
+id_*
+!id_*.pub
+.env
+.env.*
+!.env.example
+.netrc
+.git-credentials
+**/.credentials.json
+**/credentials.json
+
+# ── Local, machine-specific runtime config (recreated by the scripts) ──────────
+.ado-sync.conf
+ado-sync.conf
+*.local
+settings.local.json
+
+# ── Workspace artifacts that must stay private (org-internal) ──────────────────
+REPOS.md
+
+# ── Conversation / session dumps (migrated out-of-band, never published) ───────
+claude/projects/
+claude/session-data/
+claude/todos/
+*.conversations.tar*
+*.claude-backup.tar*
+
+# ── OS / editor noise ──────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*~

@@ -1,0 +1,13 @@
+# Template — bootstrap-git.sh writes these values for you (from env or prompts).
+[user]
+	name = <YOUR NAME>
+	email = <you@example.com>
+[credential]
+	helper = /home/linuxbrew/.linuxbrew/bin/git-credential-manager
+	credentialStore = cache
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[init]
+	defaultBranch = main
+[pull]
+	ff = only

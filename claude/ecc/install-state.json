@@ -1,0 +1,1354 @@
+{
+  "schemaVersion": "ecc.install.v1",
+  "installedAt": "2026-06-13T15:31:16.571Z",
+  "target": {
+    "id": "claude-home",
+    "target": "claude",
+    "kind": "home",
+    "root": "/home/michi/.claude",
+    "installStatePath": "/home/michi/.claude/ecc/install-state.json"
+  },
+  "request": {
+    "profile": null,
+    "modules": [
+      "hooks-runtime"
+    ],
+    "includeComponents": [],
+    "excludeComponents": [],
+    "legacyLanguages": [],
+    "legacyMode": false
+  },
+  "resolution": {
+    "selectedModules": [
+      "hooks-runtime"
+    ],
+    "skippedModules": []
+  },
+  "source": {
+    "repoVersion": "2.0.0",
+    "repoCommit": "5b173d2e6c11b976a0f13b2f59125e08956c1d47",
+    "manifestVersion": 1
+  },
+  "operations": [
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/hooks/README.md",
+      "sourceRelativePath": "hooks/README.md",
+      "destinationPath": "/home/michi/.claude/hooks/README.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/hooks/hooks.json",
+      "sourceRelativePath": "hooks/hooks.json",
+      "destinationPath": "/home/michi/.claude/hooks/hooks.json",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/hooks/memory-persistence/README.md",
+      "sourceRelativePath": "hooks/memory-persistence/README.md",
+      "destinationPath": "/home/michi/.claude/hooks/memory-persistence/README.md",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/hooks/memory-persistence/hooks.json",
+      "sourceRelativePath": "hooks/memory-persistence/hooks.json",
+      "destinationPath": "/home/michi/.claude/hooks/memory-persistence/hooks.json",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/auto-tmux-dev.js",
+      "sourceRelativePath": "scripts/hooks/auto-tmux-dev.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/auto-tmux-dev.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/bash-hook-dispatcher.js",
+      "sourceRelativePath": "scripts/hooks/bash-hook-dispatcher.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/bash-hook-dispatcher.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/block-no-verify.js",
+      "sourceRelativePath": "scripts/hooks/block-no-verify.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/block-no-verify.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/check-console-log.js",
+      "sourceRelativePath": "scripts/hooks/check-console-log.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/check-console-log.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/check-hook-enabled.js",
+      "sourceRelativePath": "scripts/hooks/check-hook-enabled.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/check-hook-enabled.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/config-protection.js",
+      "sourceRelativePath": "scripts/hooks/config-protection.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/config-protection.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/cost-tracker.js",
+      "sourceRelativePath": "scripts/hooks/cost-tracker.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/cost-tracker.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/cursor-session-env.js",
+      "sourceRelativePath": "scripts/hooks/cursor-session-env.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/cursor-session-env.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/design-quality-check.js",
+      "sourceRelativePath": "scripts/hooks/design-quality-check.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/design-quality-check.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/desktop-notify.js",
+      "sourceRelativePath": "scripts/hooks/desktop-notify.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/desktop-notify.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/doc-file-warning.js",
+      "sourceRelativePath": "scripts/hooks/doc-file-warning.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/doc-file-warning.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/ecc-context-monitor.js",
+      "sourceRelativePath": "scripts/hooks/ecc-context-monitor.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/ecc-context-monitor.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/ecc-metrics-bridge.js",
+      "sourceRelativePath": "scripts/hooks/ecc-metrics-bridge.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/ecc-metrics-bridge.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/ecc-statusline.js",
+      "sourceRelativePath": "scripts/hooks/ecc-statusline.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/ecc-statusline.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/evaluate-session.js",
+      "sourceRelativePath": "scripts/hooks/evaluate-session.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/evaluate-session.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/gateguard-fact-force.js",
+      "sourceRelativePath": "scripts/hooks/gateguard-fact-force.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/gateguard-fact-force.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/governance-capture.js",
+      "sourceRelativePath": "scripts/hooks/governance-capture.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/governance-capture.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/insaits-security-monitor.py",
+      "sourceRelativePath": "scripts/hooks/insaits-security-monitor.py",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/insaits-security-monitor.py",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/insaits-security-wrapper.js",
+      "sourceRelativePath": "scripts/hooks/insaits-security-wrapper.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/insaits-security-wrapper.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/mcp-health-check.js",
+      "sourceRelativePath": "scripts/hooks/mcp-health-check.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/mcp-health-check.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/observe-runner.js",
+      "sourceRelativePath": "scripts/hooks/observe-runner.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/observe-runner.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/plugin-hook-bootstrap.js",
+      "sourceRelativePath": "scripts/hooks/plugin-hook-bootstrap.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/plugin-hook-bootstrap.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/post-bash-build-complete.js",
+      "sourceRelativePath": "scripts/hooks/post-bash-build-complete.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/post-bash-build-complete.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/post-bash-command-log.js",
+      "sourceRelativePath": "scripts/hooks/post-bash-command-log.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/post-bash-command-log.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/post-bash-dispatcher.js",
+      "sourceRelativePath": "scripts/hooks/post-bash-dispatcher.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/post-bash-dispatcher.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/post-bash-pr-created.js",
+      "sourceRelativePath": "scripts/hooks/post-bash-pr-created.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/post-bash-pr-created.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/post-edit-accumulator.js",
+      "sourceRelativePath": "scripts/hooks/post-edit-accumulator.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/post-edit-accumulator.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/post-edit-console-warn.js",
+      "sourceRelativePath": "scripts/hooks/post-edit-console-warn.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/post-edit-console-warn.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/post-edit-format.js",
+      "sourceRelativePath": "scripts/hooks/post-edit-format.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/post-edit-format.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/post-edit-typecheck.js",
+      "sourceRelativePath": "scripts/hooks/post-edit-typecheck.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/post-edit-typecheck.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/pre-bash-commit-quality.js",
+      "sourceRelativePath": "scripts/hooks/pre-bash-commit-quality.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/pre-bash-commit-quality.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/pre-bash-dev-server-block.js",
+      "sourceRelativePath": "scripts/hooks/pre-bash-dev-server-block.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/pre-bash-dev-server-block.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/pre-bash-dispatcher.js",
+      "sourceRelativePath": "scripts/hooks/pre-bash-dispatcher.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/pre-bash-dispatcher.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/pre-bash-git-push-reminder.js",
+      "sourceRelativePath": "scripts/hooks/pre-bash-git-push-reminder.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/pre-bash-git-push-reminder.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/pre-bash-tmux-reminder.js",
+      "sourceRelativePath": "scripts/hooks/pre-bash-tmux-reminder.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/pre-bash-tmux-reminder.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/pre-compact.js",
+      "sourceRelativePath": "scripts/hooks/pre-compact.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/pre-compact.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/pre-write-doc-warn.js",
+      "sourceRelativePath": "scripts/hooks/pre-write-doc-warn.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/pre-write-doc-warn.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/pretooluse-visible-output.js",
+      "sourceRelativePath": "scripts/hooks/pretooluse-visible-output.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/pretooluse-visible-output.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/quality-gate.js",
+      "sourceRelativePath": "scripts/hooks/quality-gate.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/quality-gate.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/run-with-flags-shell.sh",
+      "sourceRelativePath": "scripts/hooks/run-with-flags-shell.sh",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/run-with-flags-shell.sh",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/run-with-flags.js",
+      "sourceRelativePath": "scripts/hooks/run-with-flags.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/run-with-flags.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/session-activity-tracker.js",
+      "sourceRelativePath": "scripts/hooks/session-activity-tracker.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/session-activity-tracker.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/session-end-marker.js",
+      "sourceRelativePath": "scripts/hooks/session-end-marker.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/session-end-marker.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/session-end.js",
+      "sourceRelativePath": "scripts/hooks/session-end.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/session-end.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/session-start-bootstrap.js",
+      "sourceRelativePath": "scripts/hooks/session-start-bootstrap.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/session-start-bootstrap.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/session-start.js",
+      "sourceRelativePath": "scripts/hooks/session-start.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/session-start.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/stop-format-typecheck.js",
+      "sourceRelativePath": "scripts/hooks/stop-format-typecheck.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/stop-format-typecheck.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/hooks/suggest-compact.js",
+      "sourceRelativePath": "scripts/hooks/suggest-compact.js",
+      "destinationPath": "/home/michi/.claude/scripts/hooks/suggest-compact.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/agent-compress.js",
+      "sourceRelativePath": "scripts/lib/agent-compress.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/agent-compress.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/agent-data-home.js",
+      "sourceRelativePath": "scripts/lib/agent-data-home.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/agent-data-home.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/control-pane/actions.js",
+      "sourceRelativePath": "scripts/lib/control-pane/actions.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/control-pane/actions.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/control-pane/server.js",
+      "sourceRelativePath": "scripts/lib/control-pane/server.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/control-pane/server.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/control-pane/state.js",
+      "sourceRelativePath": "scripts/lib/control-pane/state.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/control-pane/state.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/control-pane/ui.js",
+      "sourceRelativePath": "scripts/lib/control-pane/ui.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/control-pane/ui.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/cost-estimate.js",
+      "sourceRelativePath": "scripts/lib/cost-estimate.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/cost-estimate.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/cursor-agent-names.js",
+      "sourceRelativePath": "scripts/lib/cursor-agent-names.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/cursor-agent-names.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/ecc_dashboard_runtime.py",
+      "sourceRelativePath": "scripts/lib/ecc_dashboard_runtime.py",
+      "destinationPath": "/home/michi/.claude/scripts/lib/ecc_dashboard_runtime.py",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/github-discussions.js",
+      "sourceRelativePath": "scripts/lib/github-discussions.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/github-discussions.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/harness-adapter-compliance.js",
+      "sourceRelativePath": "scripts/lib/harness-adapter-compliance.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/harness-adapter-compliance.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/hook-flags.js",
+      "sourceRelativePath": "scripts/lib/hook-flags.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/hook-flags.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/inspection.js",
+      "sourceRelativePath": "scripts/lib/inspection.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/inspection.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-executor.js",
+      "sourceRelativePath": "scripts/lib/install-executor.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-executor.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-lifecycle.js",
+      "sourceRelativePath": "scripts/lib/install-lifecycle.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-lifecycle.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-manifests.js",
+      "sourceRelativePath": "scripts/lib/install-manifests.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-manifests.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-state.js",
+      "sourceRelativePath": "scripts/lib/install-state.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-state.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/antigravity-project.js",
+      "sourceRelativePath": "scripts/lib/install-targets/antigravity-project.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/antigravity-project.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/claude-home.js",
+      "sourceRelativePath": "scripts/lib/install-targets/claude-home.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/claude-home.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/claude-project.js",
+      "sourceRelativePath": "scripts/lib/install-targets/claude-project.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/claude-project.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/codebuddy-project.js",
+      "sourceRelativePath": "scripts/lib/install-targets/codebuddy-project.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/codebuddy-project.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/codex-home.js",
+      "sourceRelativePath": "scripts/lib/install-targets/codex-home.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/codex-home.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/cursor-project.js",
+      "sourceRelativePath": "scripts/lib/install-targets/cursor-project.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/cursor-project.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/gemini-project.js",
+      "sourceRelativePath": "scripts/lib/install-targets/gemini-project.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/gemini-project.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/helpers.js",
+      "sourceRelativePath": "scripts/lib/install-targets/helpers.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/helpers.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/joycode-project.js",
+      "sourceRelativePath": "scripts/lib/install-targets/joycode-project.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/joycode-project.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/opencode-home.js",
+      "sourceRelativePath": "scripts/lib/install-targets/opencode-home.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/opencode-home.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/qwen-home.js",
+      "sourceRelativePath": "scripts/lib/install-targets/qwen-home.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/qwen-home.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/registry.js",
+      "sourceRelativePath": "scripts/lib/install-targets/registry.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/registry.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install-targets/zed-project.js",
+      "sourceRelativePath": "scripts/lib/install-targets/zed-project.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install-targets/zed-project.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install/apply.js",
+      "sourceRelativePath": "scripts/lib/install/apply.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install/apply.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install/config.js",
+      "sourceRelativePath": "scripts/lib/install/config.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install/config.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install/request.js",
+      "sourceRelativePath": "scripts/lib/install/request.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install/request.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/install/runtime.js",
+      "sourceRelativePath": "scripts/lib/install/runtime.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/install/runtime.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/mcp-config.js",
+      "sourceRelativePath": "scripts/lib/mcp-config.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/mcp-config.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/mcp-inventory/canonical-mcp.js",
+      "sourceRelativePath": "scripts/lib/mcp-inventory/canonical-mcp.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/mcp-inventory/canonical-mcp.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/mcp-inventory/collect.js",
+      "sourceRelativePath": "scripts/lib/mcp-inventory/collect.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/mcp-inventory/collect.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/mcp-inventory/readers/claude-code.js",
+      "sourceRelativePath": "scripts/lib/mcp-inventory/readers/claude-code.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/mcp-inventory/readers/claude-code.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/mcp-inventory/readers/codex.js",
+      "sourceRelativePath": "scripts/lib/mcp-inventory/readers/codex.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/mcp-inventory/readers/codex.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/mcp-inventory/readers/opencode.js",
+      "sourceRelativePath": "scripts/lib/mcp-inventory/readers/opencode.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/mcp-inventory/readers/opencode.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/observer-sessions.js",
+      "sourceRelativePath": "scripts/lib/observer-sessions.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/observer-sessions.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/orchestration-session.js",
+      "sourceRelativePath": "scripts/lib/orchestration-session.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/orchestration-session.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/package-manager.d.ts",
+      "sourceRelativePath": "scripts/lib/package-manager.d.ts",
+      "destinationPath": "/home/michi/.claude/scripts/lib/package-manager.d.ts",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/package-manager.js",
+      "sourceRelativePath": "scripts/lib/package-manager.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/package-manager.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/project-detect.js",
+      "sourceRelativePath": "scripts/lib/project-detect.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/project-detect.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/resolve-ecc-root.js",
+      "sourceRelativePath": "scripts/lib/resolve-ecc-root.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/resolve-ecc-root.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/resolve-formatter.js",
+      "sourceRelativePath": "scripts/lib/resolve-formatter.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/resolve-formatter.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/session-adapters/canonical-session.js",
+      "sourceRelativePath": "scripts/lib/session-adapters/canonical-session.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/session-adapters/canonical-session.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/session-adapters/claude-history.js",
+      "sourceRelativePath": "scripts/lib/session-adapters/claude-history.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/session-adapters/claude-history.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/session-adapters/codex-worktree.js",
+      "sourceRelativePath": "scripts/lib/session-adapters/codex-worktree.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/session-adapters/codex-worktree.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/session-adapters/dmux-tmux.js",
+      "sourceRelativePath": "scripts/lib/session-adapters/dmux-tmux.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/session-adapters/dmux-tmux.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/session-adapters/opencode.js",
+      "sourceRelativePath": "scripts/lib/session-adapters/opencode.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/session-adapters/opencode.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/session-adapters/registry.js",
+      "sourceRelativePath": "scripts/lib/session-adapters/registry.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/session-adapters/registry.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/session-aliases.d.ts",
+      "sourceRelativePath": "scripts/lib/session-aliases.d.ts",
+      "destinationPath": "/home/michi/.claude/scripts/lib/session-aliases.d.ts",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/session-aliases.js",
+      "sourceRelativePath": "scripts/lib/session-aliases.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/session-aliases.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/session-bridge.js",
+      "sourceRelativePath": "scripts/lib/session-bridge.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/session-bridge.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/session-manager.d.ts",
+      "sourceRelativePath": "scripts/lib/session-manager.d.ts",
+      "destinationPath": "/home/michi/.claude/scripts/lib/session-manager.d.ts",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/session-manager.js",
+      "sourceRelativePath": "scripts/lib/session-manager.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/session-manager.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/shell-split.js",
+      "sourceRelativePath": "scripts/lib/shell-split.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/shell-split.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/shell-substitution.js",
+      "sourceRelativePath": "scripts/lib/shell-substitution.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/shell-substitution.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/skill-evolution/dashboard.js",
+      "sourceRelativePath": "scripts/lib/skill-evolution/dashboard.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/skill-evolution/dashboard.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/skill-evolution/health.js",
+      "sourceRelativePath": "scripts/lib/skill-evolution/health.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/skill-evolution/health.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/skill-evolution/index.js",
+      "sourceRelativePath": "scripts/lib/skill-evolution/index.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/skill-evolution/index.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/skill-evolution/provenance.js",
+      "sourceRelativePath": "scripts/lib/skill-evolution/provenance.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/skill-evolution/provenance.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/skill-evolution/tracker.js",
+      "sourceRelativePath": "scripts/lib/skill-evolution/tracker.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/skill-evolution/tracker.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/skill-evolution/versioning.js",
+      "sourceRelativePath": "scripts/lib/skill-evolution/versioning.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/skill-evolution/versioning.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/skill-improvement/amendify.js",
+      "sourceRelativePath": "scripts/lib/skill-improvement/amendify.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/skill-improvement/amendify.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/skill-improvement/evaluate.js",
+      "sourceRelativePath": "scripts/lib/skill-improvement/evaluate.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/skill-improvement/evaluate.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/skill-improvement/health.js",
+      "sourceRelativePath": "scripts/lib/skill-improvement/health.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/skill-improvement/health.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/skill-improvement/observations.js",
+      "sourceRelativePath": "scripts/lib/skill-improvement/observations.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/skill-improvement/observations.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/state-store/index.js",
+      "sourceRelativePath": "scripts/lib/state-store/index.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/state-store/index.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/state-store/migrations.js",
+      "sourceRelativePath": "scripts/lib/state-store/migrations.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/state-store/migrations.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/state-store/queries.js",
+      "sourceRelativePath": "scripts/lib/state-store/queries.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/state-store/queries.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/state-store/schema.js",
+      "sourceRelativePath": "scripts/lib/state-store/schema.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/state-store/schema.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/tmux-worktree-orchestrator.js",
+      "sourceRelativePath": "scripts/lib/tmux-worktree-orchestrator.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/tmux-worktree-orchestrator.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/transcript-context.js",
+      "sourceRelativePath": "scripts/lib/transcript-context.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/transcript-context.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/utils.d.ts",
+      "sourceRelativePath": "scripts/lib/utils.d.ts",
+      "destinationPath": "/home/michi/.claude/scripts/lib/utils.d.ts",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/utils.js",
+      "sourceRelativePath": "scripts/lib/utils.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/utils.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/worktree-lifecycle/git.js",
+      "sourceRelativePath": "scripts/lib/worktree-lifecycle/git.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/worktree-lifecycle/git.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    },
+    {
+      "kind": "copy-file",
+      "moduleId": "hooks-runtime",
+      "sourcePath": "/home/michi/ECC/scripts/lib/worktree-lifecycle/lifecycle.js",
+      "sourceRelativePath": "scripts/lib/worktree-lifecycle/lifecycle.js",
+      "destinationPath": "/home/michi/.claude/scripts/lib/worktree-lifecycle/lifecycle.js",
+      "strategy": "preserve-relative-path",
+      "ownership": "managed",
+      "scaffoldOnly": false
+    }
+  ]
+}

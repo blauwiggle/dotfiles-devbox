@@ -1,7 +1,7 @@
 # WSL2 globale Konfiguration  —  Stand 2026-06-21
 # Zweck: DNS robust halten UND dem Windows-Host CPU fuers RDP-Encoding sichern.
 # WICHTIG: nach jeder Aenderung in Windows PowerShell/CMD ausfuehren:  wsl --shutdown
-# Recovery bei Problemen:  C:\Users\vanhee\reset-wsl.bat  (Doppelklick in Windows)
+# Recovery bei Problemen:  C:\Users\<WIN_USER>\reset-wsl.bat  (Doppelklick in Windows)
 # Doku: https://learn.microsoft.com/windows/wsl/wsl-config
 
 [wsl2]

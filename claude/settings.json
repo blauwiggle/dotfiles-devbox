@@ -1,0 +1,105 @@
+{
+  "env": {
+    "ADO_COMPACT_COUNT_INTERVAL": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(git-credential-manager:*)",
+      "Bash(az:*)",
+      "Bash(jq:*)",
+      "Bash(python3:*)",
+      "Bash(pwsh:*)",
+      "Bash(brew:*)",
+      "Bash(chmod:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(echo:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(rg:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(python:*)",
+      "Bash(pip:*)",
+      "Bash(uv:*)",
+      "Bash(pytest:*)",
+      "Bash(ruff:*)",
+      "Bash(npx:*)",
+      "Bash(npm:*)",
+      "Bash(node:*)",
+      "Bash(mvn:*)",
+      "Bash(gradlew:*)",
+      "Bash(./gradlew:*)",
+      "Bash(go:*)",
+      "Bash(cargo:*)",
+      "Read(//home/michi/**)",
+      "Read(//proc/**)",
+      "mcp__azure-devops",
+      "mcp__plugin_microsoft-docs_microsoft-learn",
+      "WebSearch",
+      "WebFetch"
+    ]
+  },
+  "model": "opus",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__azure-devops__*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ~/.claude/hooks/ado-compact-suggest.js"
+          },
+          {
+            "type": "command",
+            "command": "node -e \"const p=require('path');const r=(()=>{var e=process.env.CLAUDE_PLUGIN_ROOT;if(e&&e.trim())return e.trim();var p=require('path'),f=require('fs'),h=require('os').homedir(),d=p.join(h,'.claude'),q=p.join('scripts','lib','utils.js');if(f.existsSync(p.join(d,q)))return d;for(var s of [['ecc'],['ecc@ecc'],['marketplaces','ecc'],['everything-claude-code'],['everything-claude-code@everything-claude-code'],['marketplaces','everything-claude-code']]){var l=p.join(d,'plugins',...s);if(f.existsSync(p.join(l,q)))return l}try{for(var g of ['ecc','everything-claude-code']){var b=p.join(d,'plugins','cache',g);for(var o of f.readdirSync(b,{withFileTypes:true})){if(!o.isDirectory())continue;for(var v of f.readdirSync(p.join(b,o.name),{withFileTypes:true})){if(!v.isDirectory())continue;var c=p.join(b,o.name,v.name);if(f.existsSync(p.join(c,q)))return c}}}}catch(x){}return d})();const s=p.join(r,'scripts/hooks/plugin-hook-bootstrap.js');process.env.CLAUDE_PLUGIN_ROOT=r;process.argv.splice(1,0,s);require(s)\" node scripts/hooks/suggest-compact.js"
+          }
+        ]
+      }
+    ]
+  },
+  "enableWorkflows": true,
+  "enabledPlugins": {
+    "ecc@ecc": true,
+    "drawio@365-skills": true,
+    "claude-md-management@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "hookify@claude-plugins-official": true,
+    "microsoft-docs@claude-plugins-official": true,
+    "azure@claude-plugins-official": true,
+    "mermaid@365-skills": true,
+    "atlassian@claude-plugins-official": false,
+    "sonarqube@claude-plugins-official": false,
+    "desktop-commander@claude-plugins-official": false,
+    "miro@claude-plugins-official": false
+  },
+  "extraKnownMarketplaces": {
+    "ecc": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/affaan-m/ECC.git"
+      }
+    },
+    "365-skills": {
+      "source": {
+        "source": "github",
+        "repo": "Agents365-ai/365-skills"
+      }
+    }
+  },
+  "effortLevel": "xhigh",
+  "theme": "dark",
+  "editorMode": "normal",
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
+  "remoteControlAtStartup": true,
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  }
+}

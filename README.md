@@ -19,6 +19,24 @@ never overwrite each other.
 ./install.sh
 ```
 
+## WSL config (`wsl/`)
+
+`.wslconfig` lives on the Windows C: drive and can't be stowed, so it is
+**copied** into place rather than symlinked.
+
+- `.wslconfig` — tuned for the 16 vCPU / 64 GB DevBox + heavy Claude Code
+  (multiple instances + VS Code + MCP): 13 vCPUs, 48 GB, gradual memory reclaim,
+  sparse VHD.
+- `.wslconfig.baseline-8cpu` — backup of the previous 8 vCPU / 16 GB box config.
+- `99-claude-heavy.conf` — raises inotify limits (file watchers) for VS Code + Claude.
+- `reset-wsl.bat` — Windows recovery script.
+- `deploy.sh` — copies `.wslconfig` + `reset-wsl.bat` to `C:\Users\<user>\` and
+  installs the sysctl.
+
+```bash
+./wsl/deploy.sh   # then in Windows:  wsl --shutdown
+```
+
 ## Notes
 
 - Do **not** run the macOS `~/dotfiles/install.sh` on this box — its Stow step

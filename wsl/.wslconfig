@@ -1,0 +1,36 @@
+# WSL2 global config - Azure DevBox 16 vCPU / 64 GB - tuned for heavy Claude Code ops
+# (2-3 Claude Code instances + VS Code server + MCP servers in parallel).
+# Lives on the Windows side: C:\Users\<user>\.wslconfig  (NOT stow-able).
+# Deploy:  ~/dotfiles-devbox/wsl/deploy.sh   then in Windows:  wsl --shutdown
+# Recovery: C:\Users\<user>\reset-wsl.bat
+# Docs: https://learn.microsoft.com/windows/wsl/wsl-config
+
+[wsl2]
+# 13 of 16 vCPUs to WSL; reserve 3 for the Windows RDP encoder + OS + security
+# agents. The RDP encoder shares the Windows host CPU, so starving it makes
+# typing laggy when agents peg the CPU. (default would be all 16)
+processors=13
+
+# 48 GB to WSL, leaving 16 GB for Windows/RDP. (default would be 50% = 32 GB)
+memory=48GB
+
+# Modest swap safety net. (default would be 25% of memory ~ 12 GB VHD)
+swap=8GB
+
+# Corporate DNS via tunnel + auto-pickup of the Windows/corporate proxy.
+dnsTunneling=true
+autoProxy=true
+
+# Optional: mirrored networking gives better localhost parity for MCP / VS Code
+# port forwarding (and IPv6/VPN). NAT currently works; enable + test on the new
+# box. Lockout is impossible (RDP goes to Windows, not WSL).
+# networkingMode=mirrored
+
+[experimental]
+# Return idle WSL cache to Windows gradually (gentler than the dropCache default;
+# avoids latency spikes from instant cache drops during an interactive session).
+autoMemoryReclaim=gradual
+
+# Auto-sparse newly created VHDs so the ext4 disk can shrink instead of bloating
+# (node_modules, plugin caches, repos). Existing VHDs: wsl --manage <distro> --set-sparse true
+sparseVhd=true

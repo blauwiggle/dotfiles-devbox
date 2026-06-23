@@ -1,0 +1,23 @@
+# WSL2 globale Konfiguration  —  Stand 2026-06-21
+# Zweck: DNS robust halten UND dem Windows-Host CPU fuers RDP-Encoding sichern.
+# WICHTIG: nach jeder Aenderung in Windows PowerShell/CMD ausfuehren:  wsl --shutdown
+# Recovery bei Problemen:  C:\Users\vanhee\reset-wsl.bat  (Doppelklick in Windows)
+# Doku: https://learn.microsoft.com/windows/wsl/wsl-config
+
+[wsl2]
+# DNS ueber Tunnel an den Windows-Resolver (ist in WSL 2.7 ohnehin Default; explizit = robust).
+dnsTunneling=true
+# WSL uebernimmt Windows-/Firmen-Proxy automatisch.
+autoProxy=true
+
+# KERNFIX: WSL bekommt max. 6 der 8 vCPUs. Die uebrigen 2 bleiben dem Windows-Host
+# fuer RDP-Encoding + OS -> Tippen bleibt fluessig, AUCH wenn Agents die CPU auslasten.
+processors=6
+
+# Optional, grosse VPN-/Firmennetz-Loesung. Aktuell NICHT noetig (DNS laeuft).
+# Bei Aktivierung danach 'wsl --shutdown'. Aussperren unmoeglich (RDP geht zu Windows, nicht zu WSL).
+# networkingMode=mirrored
+
+[experimental]
+# Ungenutzten WSL-Cache langsam an Windows zurueckgeben (statt sofort-drop).
+autoMemoryReclaim=gradual

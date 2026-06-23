@@ -141,6 +141,8 @@ load_config() {
       save_config
     fi
   fi
+  # Export stored PAT so az devops commands use it without prompting
+  [[ -n "${PAT:-}" ]] && export AZURE_DEVOPS_EXT_PAT="$PAT"
 }
 
 save_config() {
@@ -149,6 +151,7 @@ save_config() {
 ORG_URL="${ORG_URL}"
 BASEPATH="${BASEPATH}"
 SELECTED_PROJECTS="${SELECTED_PROJECTS}"
+PAT="${PAT:-}"
 EOF
 }
 
@@ -184,20 +187,28 @@ check_prerequisites() {
   fi
   ok "azure-devops extension ready"
 
-  # Login / connectivity
-  if ! az devops project list --org "$ORG_URL" --top 1 -o none &>/dev/null; then
-    err "Cannot connect to ${ORG_URL}."
+  # Login / connectivity — prompt for PAT rather than falling into az device code flow
+  if ! az devops project list --org "$ORG_URL" --top 1 -o none 2>/dev/null; then
+    warn "Not authenticated to ${ORG_URL} — enter a Personal Access Token."
     echo ""
-    echo "    Your session may not be authenticated or your PAT has expired."
+    echo "    Create one at: ${ORG_URL}_usersSettings/tokens"
+    echo "    Required scopes: Code (Read), Project and Team (Read)"
     echo ""
-    echo "    Setup steps:"
-    echo "    1. Create a PAT: ${ORG_URL}_usersSettings/tokens"
-    echo "       Required scopes: Code (Read), Project and Team (Read)"
-    echo "    2. Login:"
-    echo "       echo '<YOUR_PAT>' | az devops login --organization ${ORG_URL}"
+    printf "    PAT (input hidden): "
+    read -rs PAT
     echo ""
-    echo "    Docs: ${PAT_DOCS}"
-    exit 1
+    if [[ -z "$PAT" ]]; then
+      err "No PAT provided — cannot continue."
+      echo "    Docs: ${PAT_DOCS}"
+      exit 1
+    fi
+    export AZURE_DEVOPS_EXT_PAT="$PAT"
+    save_config
+    if ! az devops project list --org "$ORG_URL" --top 1 -o none 2>/dev/null; then
+      err "PAT rejected by ${ORG_URL} — check scopes and expiry."
+      echo "    Docs: ${PAT_DOCS}"
+      exit 1
+    fi
   fi
   ok "Connected to ${ORG_URL}"
 }

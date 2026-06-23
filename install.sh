@@ -36,7 +36,7 @@ bash -c "$(curl --fail --show-error --silent --location \
   https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 
 # CLI tools
-brew bundle --file="$DIR/Brewfile.linux"
+brew bundle --verbose --file="$DIR/Brewfile.linux"
 
 # Symlink zsh config (creates ~/.zshrc, so zsh never shows the new-user wizard)
 ln -sfn "$DIR/.zshrc" "$HOME/.zshrc"

@@ -72,8 +72,8 @@ zstyle ':completion:*' menu yes select
 # ============================================================
 #  Prompt + shell integrations
 # ============================================================
-eval "$(starship init zsh)"
-eval "$(direnv hook zsh)"
+command -v starship >/dev/null && eval "$(starship init zsh)"
+command -v direnv >/dev/null && eval "$(direnv hook zsh)"
 
 # thefuck init is slow -> load lazily on first use
 if command -v thefuck >/dev/null; then
@@ -134,4 +134,4 @@ alias j!=jbang
 # __zoxide_hook is verified present in chpwd_functions at runtime; the doctor
 # check is a false positive under zinit turbo's deferred precmd scheduling.
 export _ZO_DOCTOR=0
-eval "$(zoxide init --cmd cd zsh)"
+command -v zoxide >/dev/null && eval "$(zoxide init --cmd cd zsh)"

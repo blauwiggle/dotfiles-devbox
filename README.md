@@ -17,7 +17,9 @@ cd ~/dotfiles-devbox
 ./install.sh              # full bootstrap (idempotent)
 ```
 
-Then run `claude` once to authenticate, and migrate old conversations (below).
+> `install.sh` runs under **bash** — no zsh/`.zshrc` needed to bootstrap. It installs Homebrew + every tool (incl. zsh) and writes `~/.zshrc`.
+> **Order:** `./install.sh` first, then `chsh -s "$(command -v zsh)"` to make zsh your login shell, then log out/in.
+> Finally run `claude` to authenticate and migrate old conversations (below).
 
 ## What's in here
 
